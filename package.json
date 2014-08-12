@@ -1,6 +1,6 @@
 {
     "name": "wechat-toolkit",
-    "version": "0.0.4",
+    "version": "0.0.5",
     "description": "toolkit for integrate with wechat in node, this module should work with express",
     "keywords": [
         "wechat",
