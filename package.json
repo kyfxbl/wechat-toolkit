@@ -1,13 +1,12 @@
 {
     "name": "wechat-toolkit",
-    "version": "0.0.1",
-    "description": "toolkit for integrate with wechat in node",
+    "version": "0.0.4",
+    "description": "toolkit for integrate with wechat in node, this module should work with express",
     "keywords": [
         "wechat",
         "node",
         "weixin"
     ],
-    "main": "./lib/wechat-toolkit",
     "author": {
         "name": "zheng sheng dong",
         "email": "shengdong.zhen@yilos.com"
