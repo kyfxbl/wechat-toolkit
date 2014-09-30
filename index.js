@@ -6,6 +6,7 @@ var menu = require("./lib/toolbar_menu");
 var cs = require("./lib/customer_service_message");
 var access_token = require("./lib/access_token");
 var validate = require("./lib/validate");
+var group = require("./lib/group");
 
 // enable development mode at first time
 exports.enable_dev_mode = virgin.enable_dev_mode;
@@ -33,3 +34,7 @@ exports.csReplyNews = cs.replyNewsMessge;
 // upload and download media resource
 exports.uploadMedia = media.uploadMedia;
 exports.downloadMedia = media.downloadMedia;
+
+// group operation
+exports.addGroup = group.addGroup;
+exports.queryGroup = group.queryGroup;
