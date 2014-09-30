@@ -29,3 +29,7 @@ exports.createMenu = menu.createMenu;
 // customer service message
 exports.csReplyText = cs.replyTextMessage;
 exports.csReplyNews = cs.replyNewsMessge;
+
+// upload and download media resource
+exports.uploadMedia = media.uploadMedia;
+exports.downloadMedia = media.downloadMedia;
