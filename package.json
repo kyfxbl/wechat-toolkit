@@ -1,6 +1,6 @@
 {
   "name": "wechat-toolkit",
-  "version": "0.1.5",
+  "version": "0.1.8",
   "description": "toolkit for integrate with wechat in express",
   "keywords": [
     "wechat",
@@ -23,9 +23,10 @@
     "node": ">=0.8"
   },
   "dependencies": {
-    "request": "~2.40.0",
+    "formstream": "0.0.8",
     "sha1": "~1.1.0",
     "underscore": "~1.6.0",
+    "urllib": "^1.5.2",
     "xml": "~0.0.12",
     "xml2js": "~0.4.1"
   },
