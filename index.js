@@ -7,6 +7,7 @@ var cs = require("./lib/customer_service_message");
 var access_token = require("./lib/access_token");
 var validate = require("./lib/validate");
 var group = require("./lib/group");
+var fan = require("./lib/fan_info");
 
 // enable development mode at first time
 exports.enable_dev_mode = virgin.enable_dev_mode;
@@ -41,3 +42,6 @@ exports.queryGroup = group.queryGroup;
 exports.fanInGroup = group.fanInGroup;
 exports.modifyGroup = group.modifyGroup;
 exports.moveFan = group.moveFan;
+
+// fan info
+exports.getFanInfo = fan.getFanInfo;
