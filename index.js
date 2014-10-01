@@ -38,3 +38,6 @@ exports.downloadMedia = media.downloadMedia;
 // group operation
 exports.addGroup = group.addGroup;
 exports.queryGroup = group.queryGroup;
+exports.fanInGroup = group.fanInGroup;
+exports.modifyGroup = group.modifyGroup;
+exports.moveFan = group.moveFan;
