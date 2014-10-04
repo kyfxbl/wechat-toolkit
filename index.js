@@ -54,3 +54,4 @@ exports.uploadNews = news.uploadNews;
 // broadcast
 exports.broadcastNewsByGroup = broadcast.broadcastNewsByGroup;
 exports.broadcastNewsByOpenId = broadcast.broadcastNewsByOpenId;
+exports.withdraw = broadcast.withdrawBroadcast;
