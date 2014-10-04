@@ -48,6 +48,7 @@ exports.moveFan = group.moveFan;
 
 // fan info
 exports.getFanInfo = fan.getFanInfo;
+exports.getFans = fan.getFans;
 
 // upload news message
 exports.uploadNews = news.uploadNews;
