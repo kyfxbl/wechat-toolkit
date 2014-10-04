@@ -10,6 +10,7 @@ var group = require("./lib/group");
 var fan = require("./lib/fan_info");
 var broadcast = require("./lib/broadcast_message");
 var news = require("./lib/upload_news");
+var nickname = require("./lib/nickname");
 
 // enable development mode at first time
 exports.enable_dev_mode = virgin.enable_dev_mode;
@@ -55,3 +56,6 @@ exports.uploadNews = news.uploadNews;
 exports.broadcastNewsByGroup = broadcast.broadcastNewsByGroup;
 exports.broadcastNewsByOpenId = broadcast.broadcastNewsByOpenId;
 exports.withdraw = broadcast.withdrawBroadcast;
+
+// nickname
+exports.modifyNickname = nickname.modifyNickname;
