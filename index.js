@@ -8,6 +8,8 @@ var access_token = require("./lib/access_token");
 var validate = require("./lib/validate");
 var group = require("./lib/group");
 var fan = require("./lib/fan_info");
+var broadcast = require("./lib/broadcast_message");
+var news = require("./lib/upload_news");
 
 // enable development mode at first time
 exports.enable_dev_mode = virgin.enable_dev_mode;
@@ -45,3 +47,9 @@ exports.moveFan = group.moveFan;
 
 // fan info
 exports.getFanInfo = fan.getFanInfo;
+
+// upload news message
+exports.uploadNews = news.uploadNews;
+
+// broadcast
+exports.broadcastNewsByGroup = broadcast.broadcastNewsByGroup;
