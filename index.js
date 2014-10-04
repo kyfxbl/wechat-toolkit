@@ -30,6 +30,7 @@ exports.getAccessToken = access_token.getAccessToken;
 
 // custom menu
 exports.createMenu = menu.createMenu;
+exports.queryMenu = menu.queryMenu;
 
 // customer service message
 exports.csReplyText = cs.replyTextMessage;
