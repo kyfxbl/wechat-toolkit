@@ -32,6 +32,7 @@ exports.getAccessToken = access_token.getAccessToken;
 // custom menu
 exports.createMenu = menu.createMenu;
 exports.queryMenu = menu.queryMenu;
+exports.deleteMenu = menu.deleteMenu;
 
 // customer service message
 exports.csReplyText = cs.replyTextMessage;
