@@ -12,6 +12,7 @@ var broadcast = require("./lib/broadcast_message");
 var news = require("./lib/upload_news");
 var nickname = require("./lib/nickname");
 var oauth2 = require("./lib/oauth2");
+var qrcode = require("./lib/qrcode");
 
 // enable development mode at first time
 exports.enable_dev_mode = virgin.enable_dev_mode;
@@ -69,3 +70,9 @@ exports.exchangeAccessToken = oauth2.exchangeAccessToken;
 exports.refreshAccessToken = oauth2.refreshAccessToken;
 exports.getUserInfo = oauth2.getUserInfo;
 exports.validateAccessToken = oauth2.validateAccessToken;
+
+// qrcode
+exports.generateTempQR = qrcode.generateTempQR;
+exports.generateEternalQR = qrcode.generateEternalQR;
+exports.getQR = qrcode.getQR;
+exports.qrcodeURL = qrcode.qrcodeURL;
