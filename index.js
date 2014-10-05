@@ -65,3 +65,4 @@ exports.modifyNickname = nickname.modifyNickname;
 
 // oauth2
 exports.exchangeAccessToken = oauth2.exchangeAccessToken;
+exports.refreshAccessToken = oauth2.refreshAccessToken;
