@@ -11,6 +11,7 @@ var fan = require("./lib/fan_info");
 var broadcast = require("./lib/broadcast_message");
 var news = require("./lib/upload_news");
 var nickname = require("./lib/nickname");
+var oauth2 = require("./lib/oauth2");
 
 // enable development mode at first time
 exports.enable_dev_mode = virgin.enable_dev_mode;
@@ -61,3 +62,6 @@ exports.withdraw = broadcast.withdrawBroadcast;
 
 // nickname
 exports.modifyNickname = nickname.modifyNickname;
+
+// oauth2
+exports.exchangeAccessToken = oauth2.exchangeAccessToken;
