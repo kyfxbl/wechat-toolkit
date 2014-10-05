@@ -9,7 +9,6 @@ var validate = require("./lib/validate");
 var group = require("./lib/group");
 var fan = require("./lib/fan_info");
 var broadcast = require("./lib/broadcast_message");
-var news = require("./lib/upload_news");
 var nickname = require("./lib/nickname");
 var oauth2 = require("./lib/oauth2");
 var qrcode = require("./lib/qrcode");
@@ -54,10 +53,8 @@ exports.moveFan = group.moveFan;
 exports.getFanInfo = fan.getFanInfo;
 exports.getFans = fan.getFans;
 
-// upload news message
-exports.uploadNews = news.uploadNews;
-
 // broadcast
+exports.uploadNews = broadcast.uploadNews;
 exports.broadcastNewsByGroup = broadcast.broadcastNewsByGroup;
 exports.broadcastNewsByOpenId = broadcast.broadcastNewsByOpenId;
 exports.withdraw = broadcast.withdrawBroadcast;
