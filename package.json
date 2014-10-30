@@ -1,6 +1,6 @@
 {
   "name": "wechat-toolkit",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "toolkit for integrate with wechat in express",
   "keywords": [
     "wechat",
