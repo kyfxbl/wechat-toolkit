@@ -13,6 +13,7 @@ var nickname = require("./lib/nickname");
 var oauth2 = require("./lib/oauth2");
 var qrcode = require("./lib/qrcode");
 var short = require("./lib/short_url");
+var simulator = require("./lib/wx_request_simulator");
 
 // enable development mode at first time
 exports.enable_dev_mode = virgin.enable_dev_mode;
@@ -77,3 +78,6 @@ exports.qrcodeURL = qrcode.qrcodeURL;
 
 // short url
 exports.shortenURL = short.shortenURL;
+
+// simulate weixin request
+exports.simulateEvent = simulator.simulateEvent;

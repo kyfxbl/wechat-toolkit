@@ -31,6 +31,8 @@ wechat-toolkit
 14、生成带场景值二维码。包括生成永久二维码，生成临时二维码，获取二维码URL，下载二维码图片
 
 15、长链接转短链接服务
+
+16、模拟微信向开发者推送消息
 #Install
 npm install wechat-toolkit --save
 #API Example
@@ -440,6 +442,11 @@ api.shortenURL(access_token, "http://www.yilos.com", function(err, url){
 
     console.log(url);
 });
+</pre>
+
+16、模拟微信推送消息
+<pre>
+api.simulateEvent(url, token, fan_open_id, event_key);
 </pre>
 #Roadmap
 目前还有以下特性未实现，会逐步加入，也欢迎PR
