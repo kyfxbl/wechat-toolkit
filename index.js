@@ -14,6 +14,7 @@ var oauth2 = require("./lib/oauth2");
 var qrcode = require("./lib/qrcode");
 var short = require("./lib/short_url");
 var simulator = require("./lib/wx_request_simulator");
+var template = require("./lib/template_message");
 
 // enable development mode at first time
 exports.enable_dev_mode = virgin.enable_dev_mode;
@@ -81,3 +82,6 @@ exports.shortenURL = short.shortenURL;
 
 // simulate weixin request
 exports.simulateEvent = simulator.simulateEvent;
+
+// template message
+exports.sendTemplateMessage = template.sendTemplateMessage;

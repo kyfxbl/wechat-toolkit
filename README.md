@@ -33,6 +33,8 @@ wechat-toolkit
 15、长链接转短链接服务
 
 16、模拟微信向开发者推送消息
+
+17、发送模板消息
 #Install
 npm install wechat-toolkit --save
 #API Example
@@ -448,14 +450,64 @@ api.shortenURL(access_token, "http://www.yilos.com", function(err, url){
 <pre>
 api.simulateEvent(url, token, fan_open_id, event_key);
 </pre>
+
+17、发送模板消息
+<pre>
+var data = {
+
+    first: {
+        value: "您好，您已成功消费。",
+        color: "#0A0A0A"
+    },
+"keyword1":{
+        value: "守护色",
+        color: "#CCCCCC"
+    },
+"keyword2":{
+        value: "1次",
+        color: "#CCCCCC"
+    },
+"keyword3":{
+        value: "福田店",
+        color: "#CCCCCC"
+    },
+"keyword4":{
+        value: "3次",
+        color: "#CCCCCC"
+    },
+"remark":{
+        value: "欢迎下次光顾",
+        color: "#173177"
+    }
+};
+
+var obj = {
+    access_token: "access_token",
+    fan_open_id: "fan_open_id",
+    template_id: "template_id",
+    url: "http://www.yilos.com",
+    top_color: "#000000",
+    data: data
+};
+
+api.sendTemplateMessage(obj, function(err, code, message){
+
+    if(err){
+        console.log(err);
+        return;
+    }
+
+console.log(code);
+console.log(message);
+});
+</pre>
 #Roadmap
 目前还有以下特性未实现，会逐步加入，也欢迎PR
 
 1. 其它消息类型发送，如video，voice等
 2. 2014年9月19日推出的新的自定义菜单，及相对应的推送事件，如弹出系统拍照发图等
-3. 模板消息
-4. 设备接口
-5. 微信小店接口
+3. 设备接口
+4. 微信小店接口
 
 #FAQ
 Q：使用的限制
