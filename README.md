@@ -46,7 +46,7 @@ var app = express();
 app.use(wx.xml_parser());
 </pre>
 <pre>
-req.weixin.my_open_id
+req.weixin.my_origin_id
 req.weixin.fan_open_id
 req.weixin.message_time
 req.weixin.message_type
