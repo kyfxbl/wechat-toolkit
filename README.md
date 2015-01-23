@@ -35,6 +35,9 @@ wechat-toolkit
 16、模拟微信向开发者推送消息
 
 17、发送模板消息
+
+18、获取jsapi_ticket
+
 #Install
 npm install wechat-toolkit --save
 #API Example
@@ -499,6 +502,19 @@ api.sendTemplateMessage(obj, function(err, code, message){
 
 console.log(code);
 console.log(message);
+});
+</pre>
+
+5、获取jsapi_ticket
+<pre>
+wx.getJsApiTicket("app_id", function(err, access_token){
+
+    if(err){
+        console.log(err);
+        return;
+    }
+
+    console.log(jsapi_ticket);
 });
 </pre>
 #Roadmap

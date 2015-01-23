@@ -15,6 +15,7 @@ var qrcode = require("./lib/qrcode");
 var short = require("./lib/short_url");
 var simulator = require("./lib/wx_request_simulator");
 var template = require("./lib/template_message");
+var jsapi_ticket = require("./lib/jsapi_ticket");
 
 // enable development mode at first time
 exports.enable_dev_mode = virgin.enable_dev_mode;
@@ -31,6 +32,9 @@ exports.replyNewsMessage = passive.replyNewsMessage;
 
 // access_token
 exports.getAccessToken = access_token.getAccessToken;
+
+// jsapi_ticket
+exports.getJsApiTicket = jsapi_ticket.getJsApiTicket;
 
 // custom menu
 exports.createMenu = menu.createMenu;
