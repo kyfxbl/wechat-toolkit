@@ -38,6 +38,8 @@ wechat-toolkit
 
 18、获取jsapi_ticket
 
+19、根据订单ID获取订单详情
+
 #Install
 npm install wechat-toolkit --save
 #API Example
@@ -505,9 +507,9 @@ console.log(message);
 });
 </pre>
 
-5、获取jsapi_ticket
+18、获取jsapi_ticket
 <pre>
-wx.getJsApiTicket("app_id", function(err, access_token){
+wx.getJsApiTicket("access_token", function(err, jsapi_ticket){
 
     if(err){
         console.log(err);
@@ -517,13 +519,25 @@ wx.getJsApiTicket("app_id", function(err, access_token){
     console.log(jsapi_ticket);
 });
 </pre>
+
+19、根据订单ID获取订单详情
+<pre>
+wx.getOrderDetail("access_token", "order_id", function(err, order_detail){
+
+    if(err){
+        console.log(err);
+        return;
+    }
+
+    console.log(order_detail);
+});
+</pre>
 #Roadmap
 目前还有以下特性未实现，会逐步加入，也欢迎PR
 
 1. 其它消息类型发送，如video，voice等
 2. 2014年9月19日推出的新的自定义菜单，及相对应的推送事件，如弹出系统拍照发图等
 3. 设备接口
-4. 微信小店接口
 
 #FAQ
 Q：使用的限制？

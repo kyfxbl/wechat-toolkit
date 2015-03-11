@@ -16,6 +16,7 @@ var short = require("./lib/short_url");
 var simulator = require("./lib/wx_request_simulator");
 var template = require("./lib/template_message");
 var jsapi_ticket = require("./lib/jsapi_ticket");
+var order = require("./lib/order");
 
 // enable development mode at first time
 exports.enable_dev_mode = virgin.enable_dev_mode;
@@ -89,3 +90,6 @@ exports.simulateEvent = simulator.simulateEvent;
 
 // template message
 exports.sendTemplateMessage = template.sendTemplateMessage;
+
+// order detail
+exports.getOrderDetail = order.getOrderDetail;
