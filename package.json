@@ -1,6 +1,6 @@
 {
   "name": "wechat-toolkit",
-  "version": "0.2.7",
+  "version": "0.2.9",
   "description": "toolkit for integrate with wechat in express",
   "keywords": [
     "wechat",
@@ -10,10 +10,14 @@
   ],
   "author": {
     "name": "zheng sheng dong",
-    "email": "shengdong.zhen@yilos.com",
-    "name": "liu xin",
-    "email": "liuxin7410@qq.com"
+    "email": "shengdong.zhen@yilos.com"
   },
+  "contributors": [
+      {
+      "name": "liu xin",
+      "email": "liuxin7410@qq.com"
+        }
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/kyfxbl/wechat-toolkit"
