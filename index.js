@@ -81,6 +81,7 @@ exports.generateTempQR = qrcode.generateTempQR;
 exports.generateEternalQR = qrcode.generateEternalQR;
 exports.getQR = qrcode.getQR;
 exports.qrcodeURL = qrcode.qrcodeURL;
+exports.generateEternalQrBySceneStr = qrcode.generateEternalQrBySceneStr;
 
 // short url
 exports.shortenURL = short.shortenURL;
