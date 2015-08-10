@@ -17,6 +17,7 @@ var simulator = require("./lib/wx_request_simulator");
 var template = require("./lib/template_message");
 var jsapi_ticket = require("./lib/jsapi_ticket");
 var order = require("./lib/order");
+var payment = require("./lib/payment");
 
 // enable development mode at first time
 exports.enable_dev_mode = virgin.enable_dev_mode;
@@ -94,3 +95,6 @@ exports.sendTemplateMessage = template.sendTemplateMessage;
 
 // order detail
 exports.getOrderDetail = order.getOrderDetail;
+
+// redpack
+exports.cash_redpack = payment.cash_redpack;
