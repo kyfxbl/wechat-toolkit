@@ -13,10 +13,10 @@
     "email": "shengdong.zhen@yilos.com"
   },
   "contributors": [
-      {
+    {
       "name": "liu xin",
       "email": "liuxin7410@qq.com"
-        }
+    }
   ],
   "repository": {
     "type": "git",
@@ -30,6 +30,7 @@
   },
   "dependencies": {
     "formstream": "0.0.8",
+    "moment": "^2.10.6",
     "sha1": "~1.1.0",
     "underscore": "~1.6.0",
     "urllib": "^1.5.2",
