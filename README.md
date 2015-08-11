@@ -1,7 +1,8 @@
 wechat-toolkit
 ==============
 微信公众平台开发SDK，用于node平台，需要配合express使用
-#Features
+
+# Features
 1、微信服务器消息解析中间件。解析微信服务器发来的请求。解析后，会在req上增加weixin对象，从中可以直接取到微信服务器发来的参数，比如req.weixin.fan_open_id
 
 2、打开开发者模式。公众号启用开发者模式，需要和微信服务器做一次验证
@@ -40,9 +41,12 @@ wechat-toolkit
 
 19、根据订单ID获取订单详情
 
-#Install
+20、发送现金红包
+
+# Install
 npm install wechat-toolkit --save
-#API Example
+
+# API Example
 1、解析微信消息
 <pre>
 var wx = require("wechat-toolkit");
@@ -532,14 +536,52 @@ wx.getOrderDetail("access_token", "order_id", function(err, order_detail){
     console.log(order_detail);
 });
 </pre>
-#Roadmap
+
+20、发送现金红包
+<pre>
+var params = {
+    mch_id: "xxxx",// 商户账号
+    wxappid: "xxxx",// 公众号app_id
+    nick_name: "发红包的活动主办者名称",
+    send_name: "发红包的商户名称",
+    re_openid: "xxxx",// 目标用户的open_id
+    total_amount: 100,// 单位分，最小是100
+    wishing: "测试发送红包",// 祝福语
+    act_name: "送红包活动",// 活动名称
+    remark: "快来领啊",// 备注
+    logo_imgurl: "http://xxx.com/abc.png"// logo url
+};
+
+// 第一个参数是params object
+// 第二个参数是商户API密钥
+// 第三个参数是p12证书的路径
+// 回调函数code，0表示发送红包成功，1表示发送红包失败
+// 回调函数result，已经解析成json对象
+payment.cash_redpack(params, "abc", "apiclient_cert.p12", function(err, code, result){
+
+    if(err){
+        console.log(err);
+        return;
+    }
+
+    if(code === 0){
+        console.log("调用成功");
+    }else{
+        console.log("调用失败");
+    }
+
+    console.log(result);
+});
+</pre>
+
+# Roadmap
 目前还有以下特性未实现，会逐步加入，也欢迎PR
 
 1. 其它消息类型发送，如video，voice等
 2. 2014年9月19日推出的新的自定义菜单，及相对应的推送事件，如弹出系统拍照发图等
 3. 设备接口
 
-#FAQ
+# FAQ
 Q：使用的限制？
 
 A：本SDK基于express，为了方便依赖了express的中间件机制，以及req, res对象，所以需要配合express使用。如果你的web框架不是选型express，那么只能看一下源码，了解一下微信原生接口的参数格式了
