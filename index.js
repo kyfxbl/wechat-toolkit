@@ -18,6 +18,7 @@ var template = require("./lib/template_message");
 var jsapi_ticket = require("./lib/jsapi_ticket");
 var order = require("./lib/order");
 var payment = require("./lib/payment");
+var preview = require("./lib/preview_message");
 
 // enable development mode at first time
 exports.enable_dev_mode = virgin.enable_dev_mode;
@@ -44,8 +45,18 @@ exports.queryMenu = menu.queryMenu;
 exports.deleteMenu = menu.deleteMenu;
 
 // customer service message
-exports.csReplyText = cs.replyTextMessage;
-exports.csReplyNews = cs.replyNewsMessge;
+exports.replyTextMessge = cs.replyTextMessge;
+exports.replyNewsMessge = cs.replyNewsMessge;
+exports.replyImageMessge = cs.replyImageMessge;
+exports.replyVoiceMessge = cs.replyVoiceMessge;
+exports.replyVideoMessge = cs.replyVideoMessge;
+
+// preview message
+exports.previewTextMessge = preview.previewTextMessge;
+exports.previewNewsMessge = preview.previewNewsMessge;
+exports.previewImageMessge = preview.previewImageMessge;
+exports.previewVoiceMessge = preview.previewVoiceMessge;
+exports.previewVideoMessge = preview.previewVideoMessge;
 
 // upload and download media resource
 exports.uploadMedia = media.uploadMedia;
@@ -67,6 +78,11 @@ exports.uploadNews = broadcast.uploadNews;
 exports.broadcastNewsByGroup = broadcast.broadcastNewsByGroup;
 exports.broadcastNewsByOpenId = broadcast.broadcastNewsByOpenId;
 exports.withdraw = broadcast.withdrawBroadcast;
+exports.broadcastMessageToAll = broadcast.broadcastMessageToAll;
+exports.broadcastNewsToAll = broadcast.broadcastNewsToAll;
+exports.broadcastVideoToAll = broadcast.broadcastVideoToAll;
+exports.broadcastImageToAll = broadcast.broadcastImageToAll;
+exports.broadcastVoiceToAll = broadcast.broadcastVoiceToAll;
 
 // nickname
 exports.modifyNickname = nickname.modifyNickname;
