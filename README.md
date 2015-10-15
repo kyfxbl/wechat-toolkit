@@ -3,6 +3,7 @@ wechat-toolkit
 微信公众平台开发SDK，用于node平台，需要配合express使用
 
 # Features
+
 1、微信服务器消息解析中间件。解析微信服务器发来的请求。解析后，会在req上增加weixin对象，从中可以直接取到微信服务器发来的参数，比如req.weixin.fan_open_id
 
 2、打开开发者模式。公众号启用开发者模式，需要和微信服务器做一次验证
@@ -43,18 +44,23 @@ wechat-toolkit
 
 20、发送现金红包
 
+21、上传、下载永久多媒体素材（在微信服务器长期保存）
+
 # Install
 npm install wechat-toolkit --save
 
 # API Example
-1、解析微信消息
-<pre>
+
+## 解析微信消息
+
+```
 var wx = require("wechat-toolkit");
 
 var app = express();
 app.use(wx.xml_parser());
-</pre>
-<pre>
+```
+
+```
 req.weixin.my_origin_id
 req.weixin.fan_open_id
 req.weixin.message_time
@@ -63,25 +69,26 @@ req.weixin.message_id
 req.weixin.content
 req.weixin.event
 req.weixin.event_key
-</pre>
+```
 
-2、开启开发者模式
-<pre>
+## 开启开发者模式
+
+```
 var app = express();
 app.get("/weixin/weixinInterface", wx.enable_dev_mode(token));// token在公众平台管理后台设置
-</pre>
+```
 
-3、验证消息来源
-<pre>
+## 验证消息来源
+```
 var flag = wx.validate(req, token);// true or false
-</pre>
+```
 
-4、被动回复粉丝消息
-<pre>
+## 被动回复粉丝消息
+```
 wx.replyTextMessage(req, res, "感谢您的关注");
-</pre>
+```
 
-<pre>
+```
 var item1 = {
             title: "标题1",
             desc: "描述1",
@@ -99,10 +106,10 @@ var item1 = {
         var contents = [item1, item2];
 
         wx.replyNewsMessage(req, res, contents);
-</pre>
+```
 
-5、获取access_token
-<pre>
+## 获取access_token
+```
 wx.getAccessToken("app_id", "app_secret", function(err, access_token){
 
     if(err){
@@ -112,10 +119,10 @@ wx.getAccessToken("app_id", "app_secret", function(err, access_token){
 
     console.log(access_token);
 });
-</pre>
+```
 
-6、创建自定义菜单
-<pre>
+## 创建自定义菜单
+```
 var obj = {
     "button" : [
         {
@@ -156,18 +163,18 @@ menus.createMenu(access_token, obj, function(err, error_code, error_message){
     console.log(error_code);
     console.log(error_message)
 });
-</pre>
+```
 
-7、发送客服消息
-<pre>
+## 发送客服消息
+```
 cs.replyTextMessage(access_token, fan_open_id, "刚才收到您的回复", function(err, code, msg){
 
     console.log(code);
     console.log(msg);
 });
-</pre>
+```
 
-<pre>
+```
 var articles = [
     {
         title: "Happy Day",
@@ -188,10 +195,10 @@ cs.replyNewsMessge(access_token,fan_open_id, articles, function(err, code, msg){
     console.log(code);
     console.log(msg);
 });
-</pre>
+```
 
-8、上传、下载临时多媒体素材
-<pre>
+## 上传、下载临时多媒体素材
+```
 media.uploadMedia(access_token, "image", "/users/apple/test/8.jpg", function(err, type, media_id, created_at){
 
     if(err){
@@ -215,10 +222,10 @@ media.downloadMedia(access_token, media_id, function(err, result){
     }
 
 });
-</pre>
+```
 
-9、粉丝群组操作
-<pre>
+## 粉丝群组操作
+```
 group.addGroup(access_token, "kyfxbl", function(err, group_id){
 
     if(err){
@@ -268,10 +275,10 @@ group.moveFan(access_token, open_id, "115", function(err){
 
     console.log("move user success");
 });
-</pre>
+```
 
-10、获取粉丝信息
-<pre>
+## 获取粉丝信息
+```
 fan.getFanInfo(access_token, open_id, function(err, info){
 
     if(err){
@@ -291,12 +298,12 @@ fan.getFans(access_token, null, function(err, result){
 
     console.log(result);
 });
-</pre>
+```
 
-11、群发消息
+## 群发消息
 
 如果是群发图文消息，需要先调用uploadNews方法，上传图文消息，再根据返回结果中的media_id来群发
-<pre>
+```
 var contents = [];
 contents.push(
     {
@@ -359,10 +366,10 @@ api.withdrawBroadcast(access_token, "2349457266", function(err, result){
 
     console.log(result);
 });
-</pre>
+```
 
-12、修改粉丝备注名
-<pre>
+## 修改粉丝备注名
+```
 api.modifyNickname(access_token, open_id, "dongge", function(err, response){
 
     if(err){
@@ -372,9 +379,9 @@ api.modifyNickname(access_token, open_id, "dongge", function(err, response){
 
     console.log(response);
 });
-</pre>
+```
 
-13、网页Oauth2
+## 网页Oauth2
 
 整体的流程：
 
@@ -382,7 +389,7 @@ api.modifyNickname(access_token, open_id, "dongge", function(err, response){
 
 2, 如果此前选择的scope是snsapi_userinfo，那么可以继续调用getUserInfo，得到用户的详细信息
 
-<pre>
+```
 api.exchangeAccessToken(app_id, app_secret, code, function(err, result){
 
     if(err){
@@ -417,10 +424,10 @@ api.validateAccessToken(refresh_token, fan_open_id, function(err, flag){
 
     console.log(flag);
 });
-</pre>
+```
 
-14、生成带场景值二维码
-<pre>
+## 生成带场景值二维码
+```
 api.generateTempQR(access_token, 600, 123456, function(err, result){
 
     if(err){
@@ -440,10 +447,10 @@ api.generateEternalQR(access_token, 23, function(err, result){
 
     console.log(result);
 });
-</pre>
+```
 
-15、长链接转短链接
-<pre>
+## 长链接转短链接
+```
 api.shortenURL(access_token, "http://www.yilos.com", function(err, url){
 
     if(err){
@@ -453,15 +460,15 @@ api.shortenURL(access_token, "http://www.yilos.com", function(err, url){
 
     console.log(url);
 });
-</pre>
+```
 
-16、模拟微信推送消息
-<pre>
+## 模拟微信推送消息
+```
 api.simulateEvent(url, token, fan_open_id, event_key);
-</pre>
+```
 
-17、发送模板消息
-<pre>
+## 发送模板消息
+```
 var data = {
 
     first: {
@@ -509,10 +516,10 @@ api.sendTemplateMessage(obj, function(err, code, message){
 console.log(code);
 console.log(message);
 });
-</pre>
+```
 
-18、获取jsapi_ticket
-<pre>
+## 获取jsapi_ticket
+```
 wx.getJsApiTicket("access_token", function(err, jsapi_ticket){
 
     if(err){
@@ -522,10 +529,10 @@ wx.getJsApiTicket("access_token", function(err, jsapi_ticket){
 
     console.log(jsapi_ticket);
 });
-</pre>
+```
 
-19、根据订单ID获取订单详情
-<pre>
+## 根据订单ID获取订单详情
+```
 wx.getOrderDetail("access_token", "order_id", function(err, order_detail){
 
     if(err){
@@ -535,10 +542,10 @@ wx.getOrderDetail("access_token", "order_id", function(err, order_detail){
 
     console.log(order_detail);
 });
-</pre>
+```
 
-20、发送现金红包
-<pre>
+## 发送现金红包
+```
 var params = {
     mch_id: "xxxx",// 商户账号
     wxappid: "xxxx",// 公众号app_id
@@ -572,7 +579,7 @@ payment.cash_redpack(params, "abc", "apiclient_cert.p12", function(err, code, re
 
     console.log(result);
 });
-</pre>
+```
 
 # Roadmap
 目前还有以下特性未实现，会逐步加入，也欢迎PR
