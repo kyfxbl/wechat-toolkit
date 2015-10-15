@@ -18,6 +18,7 @@ var template = require("./lib/template_message");
 var jsapi_ticket = require("./lib/jsapi_ticket");
 var order = require("./lib/order");
 var payment = require("./lib/payment");
+var permanent = require("./lib/permanent_material");
 
 // enable development mode at first time
 exports.enable_dev_mode = virgin.enable_dev_mode;
@@ -50,6 +51,14 @@ exports.csReplyNews = cs.replyNewsMessage;
 // upload and download temporary material resource
 exports.uploadMedia = media.uploadMedia;
 exports.downloadMedia = media.downloadMedia;
+
+// upload and download permanent material resource
+exports.uploadPermanentNewsMaterial = permanent.uploadPermanentNewsMaterial;
+exports.uploadImageForNewsContent = permanent.uploadImageForNewsContent;
+exports.uploadPermanentVideoMaterial = permanent.uploadPermanentVideoMaterial;
+exports.uploadPermanentImageMaterial = permanent.uploadPermanentImageMaterial;
+exports.uploadPermanentVoiceMaterial = permanent.uploadPermanentVoiceMaterial;
+exports.uploadPermanentThumbMaterial = permanent.uploadPermanentThumbMaterial;
 
 // group operation
 exports.addGroup = group.addGroup;
