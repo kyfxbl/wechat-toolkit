@@ -17,7 +17,7 @@ wechat-toolkit
 
 7、发送客服消息（粉丝主动给公众号发起互动之后，公众号可以在48小时内回复无限次消息）
 
-8、上传、下载多媒体素材
+8、上传、下载临时多媒体素材（在微信服务器保留3天）
 
 9、粉丝群组操作。包括创建群组、查询群组、修改群组、查询粉丝所属群组、移动粉丝到群组
 
@@ -190,7 +190,7 @@ cs.replyNewsMessge(access_token,fan_open_id, articles, function(err, code, msg){
 });
 </pre>
 
-8、上传、下载多媒体素材
+8、上传、下载临时多媒体素材
 <pre>
 media.uploadMedia(access_token, "image", "/users/apple/test/8.jpg", function(err, type, media_id, created_at){
 

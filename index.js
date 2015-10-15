@@ -47,7 +47,7 @@ exports.deleteMenu = menu.deleteMenu;
 exports.csReplyText = cs.replyTextMessage;
 exports.csReplyNews = cs.replyNewsMessage;
 
-// upload and download media resource
+// upload and download temporary material resource
 exports.uploadMedia = media.uploadMedia;
 exports.downloadMedia = media.downloadMedia;
 
