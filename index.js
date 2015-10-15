@@ -45,7 +45,7 @@ exports.deleteMenu = menu.deleteMenu;
 
 // customer service message
 exports.csReplyText = cs.replyTextMessage;
-exports.csReplyNews = cs.replyNewsMessge;
+exports.csReplyNews = cs.replyNewsMessage;
 
 // upload and download media resource
 exports.uploadMedia = media.uploadMedia;
