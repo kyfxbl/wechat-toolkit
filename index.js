@@ -77,6 +77,11 @@ exports.uploadNews = broadcast.uploadNews;
 exports.broadcastNewsByGroup = broadcast.broadcastNewsByGroup;
 exports.broadcastNewsByOpenId = broadcast.broadcastNewsByOpenId;
 exports.withdraw = broadcast.withdrawBroadcast;
+exports.broadcastMessageToAll = broadcast.broadcastMessageToAll;
+exports.broadcastNewsToAll = broadcast.broadcastNewsToAll;
+exports.broadcastVideoToAll = broadcast.broadcastVideoToAll;
+exports.broadcastImageToAll = broadcast.broadcastImageToAll;
+exports.broadcastVoiceToAll = broadcast.broadcastVoiceToAll;
 
 // nickname
 exports.modifyNickname = nickname.modifyNickname;
