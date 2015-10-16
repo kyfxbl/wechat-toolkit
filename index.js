@@ -19,6 +19,7 @@ var jsapi_ticket = require("./lib/jsapi_ticket");
 var order = require("./lib/order");
 var payment = require("./lib/payment");
 var permanent = require("./lib/permanent_material");
+var preview = require("./lib/preview_message");
 
 // enable development mode at first time
 exports.enable_dev_mode = virgin.enable_dev_mode;
@@ -107,3 +108,10 @@ exports.getOrderDetail = order.getOrderDetail;
 
 // redpack
 exports.cash_redpack = payment.cash_redpack;
+
+// preview message
+exports.previewTextMessage = preview.previewTextMessage;
+exports.previewNewsMessage = preview.previewNewsMessage;
+exports.previewImageMessage = preview.previewImageMessage;
+exports.previewVoiceMessage = preview.previewVoiceMessage;
+exports.previewVideoMessage = preview.previewVideoMessage;
