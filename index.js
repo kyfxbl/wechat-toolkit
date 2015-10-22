@@ -19,6 +19,7 @@ var jsapi_ticket = require("./lib/jsapi_ticket");
 var order = require("./lib/order");
 var payment = require("./lib/payment");
 var permanent = require("./lib/permanent_material");
+var preview = require("./lib/preview_message");
 
 // enable development mode at first time
 exports.enable_dev_mode = virgin.enable_dev_mode;
@@ -47,6 +48,9 @@ exports.deleteMenu = menu.deleteMenu;
 // customer service message
 exports.csReplyText = cs.replyTextMessage;
 exports.csReplyNews = cs.replyNewsMessage;
+exports.replyImageMessage = cs.replyImageMessage;
+exports.replyVoiceMessage = cs.replyVoiceMessage;
+exports.replyVideoMessage = cs.replyVideoMessage;
 
 // upload and download temporary material resource
 exports.uploadMedia = media.uploadMedia;
@@ -76,6 +80,11 @@ exports.uploadNews = broadcast.uploadNews;
 exports.broadcastNewsByGroup = broadcast.broadcastNewsByGroup;
 exports.broadcastNewsByOpenId = broadcast.broadcastNewsByOpenId;
 exports.withdraw = broadcast.withdrawBroadcast;
+exports.broadcastMessageToAll = broadcast.broadcastMessageToAll;
+exports.broadcastNewsToAll = broadcast.broadcastNewsToAll;
+exports.broadcastVideoToAll = broadcast.broadcastVideoToAll;
+exports.broadcastImageToAll = broadcast.broadcastImageToAll;
+exports.broadcastVoiceToAll = broadcast.broadcastVoiceToAll;
 
 // nickname
 exports.modifyNickname = nickname.modifyNickname;
@@ -107,3 +116,10 @@ exports.getOrderDetail = order.getOrderDetail;
 
 // redpack
 exports.cash_redpack = payment.cash_redpack;
+
+// preview message
+exports.previewTextMessage = preview.previewTextMessage;
+exports.previewNewsMessage = preview.previewNewsMessage;
+exports.previewImageMessage = preview.previewImageMessage;
+exports.previewVoiceMessage = preview.previewVoiceMessage;
+exports.previewVideoMessage = preview.previewVideoMessage;
