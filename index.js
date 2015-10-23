@@ -46,11 +46,11 @@ exports.queryMenu = menu.queryMenu;
 exports.deleteMenu = menu.deleteMenu;
 
 // customer service message
-exports.csReplyText = cs.replyTextMessage;
-exports.csReplyNews = cs.replyNewsMessage;
-exports.replyImageMessage = cs.replyImageMessage;
-exports.replyVoiceMessage = cs.replyVoiceMessage;
-exports.replyVideoMessage = cs.replyVideoMessage;
+exports.csReplyCSText = cs.replyCSTextMessage;
+exports.csReplyCSNews = cs.replyCSNewsMessage;
+exports.replyCSImageMessage = cs.replyCSImageMessage;
+exports.replyCSVoiceMessage = cs.replyCSVoiceMessage;
+exports.replyCSVideoMessage = cs.replyCSVideoMessage;
 
 // upload and download temporary material resource
 exports.uploadMedia = media.uploadMedia;
