@@ -1,6 +1,6 @@
 {
   "name": "wechat-toolkit",
-  "version": "0.2.16",
+  "version": "0.2.17",
   "description": "toolkit for integrate with wechat in express",
   "keywords": [
     "wechat",
@@ -16,6 +16,10 @@
     {
       "name": "liu xin",
       "email": "liuxin7410@qq.com"
+    },
+    {
+      "name": "camille benhamou",
+      "email": "camille.benhamou@gmail.com"
     }
   ],
   "repository": {
