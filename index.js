@@ -20,6 +20,7 @@ var order = require("./lib/order");
 var payment = require("./lib/payment");
 var permanent = require("./lib/permanent_material");
 var preview = require("./lib/preview_message");
+var statistic = require("./lib/statistic");
 
 // enable development mode at first time
 exports.enable_dev_mode = virgin.enable_dev_mode;
@@ -123,3 +124,22 @@ exports.previewNewsMessage = preview.previewNewsMessage;
 exports.previewImageMessage = preview.previewImageMessage;
 exports.previewVoiceMessage = preview.previewVoiceMessage;
 exports.previewVideoMessage = preview.previewVideoMessage;
+
+// statistics
+exports.getUserSummary = statistic.getUserSummary;
+exports.getUserCumulate = statistic.getUserCumulate;
+exports.getArticleSummary = statistic.getArticleSummary;
+exports.getArticleTotal = statistic.getArticleTotal;
+exports.getUserRead = statistic.getUserRead;
+exports.getUserReadHour = statistic.getUserReadHour;
+exports.getUserShare = statistic.getUserShare;
+exports.getUserShareHour = statistic.getUserShareHour;
+exports.getUpstreamMsg = statistic.getUpstreamMsg;
+exports.getUpstreamMsgHour = statistic.getUpstreamMsgHour;
+exports.getUpstreamMsgWeek = statistic.getUpstreamMsgWeek;
+exports.getUpstreamMsgMonth = statistic.getUpstreamMsgMonth;
+exports.getUpstreamMsgDist = statistic.getUpstreamMsgDist;
+exports.getUpstreamMsgDistWeek = statistic.getUpstreamMsgDistWeek;
+exports.getUpstreamMsgDistMonth = statistic.getUpstreamMsgDistMonth;
+exports.getInterfaceSummary = statistic.getInterfaceSummary;
+exports.getInterfaceSummaryHour = statistic.getInterfaceSummaryHour;
